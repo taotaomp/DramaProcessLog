@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace DPL
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
+        private void frmConfigure()
+        {
+            this.StartPosition = FormStartPosition.CenterParent;        
+            this.MaximizeBox = false;                                   //取消最大化功能
+        }
+
     }
 }
