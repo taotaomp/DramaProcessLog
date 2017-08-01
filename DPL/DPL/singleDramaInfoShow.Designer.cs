@@ -32,7 +32,7 @@
             this.textBox_DramaName = new System.Windows.Forms.TextBox();
             this.pictureBox_DramaPic = new System.Windows.Forms.PictureBox();
             this.label_DramaTotalProgress = new System.Windows.Forms.Label();
-            this.textBox_DramaTotalProgresss = new System.Windows.Forms.TextBox();
+            this.textBox_DramaTotalProgress = new System.Windows.Forms.TextBox();
             this.label_DramaLocalProgress = new System.Windows.Forms.Label();
             this.textBox_DramaLocalProgress = new System.Windows.Forms.TextBox();
             this.progressBar_Drama = new System.Windows.Forms.ProgressBar();
@@ -73,12 +73,12 @@
             this.label_DramaTotalProgress.TabIndex = 0;
             this.label_DramaTotalProgress.Text = "番剧总进度";
             // 
-            // textBox_DramaTotalProgresss
+            // textBox_DramaTotalProgress
             // 
-            this.textBox_DramaTotalProgresss.Location = new System.Drawing.Point(186, 163);
-            this.textBox_DramaTotalProgresss.Name = "textBox_DramaTotalProgresss";
-            this.textBox_DramaTotalProgresss.Size = new System.Drawing.Size(60, 21);
-            this.textBox_DramaTotalProgresss.TabIndex = 1;
+            this.textBox_DramaTotalProgress.Location = new System.Drawing.Point(186, 163);
+            this.textBox_DramaTotalProgress.Name = "textBox_DramaTotalProgress";
+            this.textBox_DramaTotalProgress.Size = new System.Drawing.Size(60, 21);
+            this.textBox_DramaTotalProgress.TabIndex = 1;
             // 
             // label_DramaLocalProgress
             // 
@@ -111,13 +111,12 @@
             this.Controls.Add(this.pictureBox_DramaPic);
             this.Controls.Add(this.textBox_DramaLocalProgress);
             this.Controls.Add(this.label_DramaLocalProgress);
-            this.Controls.Add(this.textBox_DramaTotalProgresss);
+            this.Controls.Add(this.textBox_DramaTotalProgress);
             this.Controls.Add(this.label_DramaTotalProgress);
             this.Controls.Add(this.textBox_DramaName);
             this.Controls.Add(this.label_DramaName);
             this.Name = "singleDramaInfoShow";
             this.Size = new System.Drawing.Size(610, 386);
-            this.Load += new System.EventHandler(this.singleDramaInfoShow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_DramaPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,7 +129,7 @@
         private System.Windows.Forms.TextBox textBox_DramaName;
         private System.Windows.Forms.PictureBox pictureBox_DramaPic;
         private System.Windows.Forms.Label label_DramaTotalProgress;
-        private System.Windows.Forms.TextBox textBox_DramaTotalProgresss;
+        private System.Windows.Forms.TextBox textBox_DramaTotalProgress;
         private System.Windows.Forms.Label label_DramaLocalProgress;
         private System.Windows.Forms.TextBox textBox_DramaLocalProgress;
         private System.Windows.Forms.ProgressBar progressBar_Drama;
