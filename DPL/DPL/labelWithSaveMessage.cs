@@ -18,7 +18,7 @@ namespace DPL
             dramaName = new Label();
             dramaName.AutoSize = true;
             dramaName.Location = new Point(0, (this.Height / 2));
-            dramaName.Font = new Font("仿宋", 12);
+            dramaName.Font = new Font("仿宋", 12,FontStyle.Bold);
             dramaName.BackColor = Color.FromArgb(0, 240, 240, 240);
             dramaName.Cursor = Cursors.Arrow;
             this.Controls.Add(dramaName);

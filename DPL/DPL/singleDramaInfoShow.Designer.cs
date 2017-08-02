@@ -64,6 +64,7 @@
             this.pictureBox_DramaPic.Location = new System.Drawing.Point(380, 21);
             this.pictureBox_DramaPic.Name = "pictureBox_DramaPic";
             this.pictureBox_DramaPic.Size = new System.Drawing.Size(135, 161);
+            this.pictureBox_DramaPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_DramaPic.TabIndex = 2;
             this.pictureBox_DramaPic.TabStop = false;
             // 
