@@ -42,23 +42,26 @@
             // label_DramaName
             // 
             this.label_DramaName.AutoSize = true;
+            this.label_DramaName.Font = new System.Drawing.Font("华文仿宋", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_DramaName.Location = new System.Drawing.Point(32, 62);
             this.label_DramaName.Name = "label_DramaName";
-            this.label_DramaName.Size = new System.Drawing.Size(41, 12);
+            this.label_DramaName.Size = new System.Drawing.Size(70, 21);
             this.label_DramaName.TabIndex = 0;
             this.label_DramaName.Text = "番剧名";
             // 
             // textBox_DramaName
             // 
-            this.textBox_DramaName.Location = new System.Drawing.Point(98, 59);
+            this.textBox_DramaName.BackColor = System.Drawing.Color.White;
+            this.textBox_DramaName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_DramaName.Location = new System.Drawing.Point(108, 62);
             this.textBox_DramaName.Name = "textBox_DramaName";
-            this.textBox_DramaName.Size = new System.Drawing.Size(183, 21);
-            this.textBox_DramaName.TabIndex = 1;
+            this.textBox_DramaName.Size = new System.Drawing.Size(183, 26);
+            this.textBox_DramaName.TabIndex = 0;
             // 
             // pictureBox_DramaPic
             // 
             this.pictureBox_DramaPic.BackColor = System.Drawing.Color.White;
-            this.pictureBox_DramaPic.Location = new System.Drawing.Point(411, 23);
+            this.pictureBox_DramaPic.Location = new System.Drawing.Point(380, 21);
             this.pictureBox_DramaPic.Name = "pictureBox_DramaPic";
             this.pictureBox_DramaPic.Size = new System.Drawing.Size(135, 161);
             this.pictureBox_DramaPic.TabIndex = 2;
@@ -67,40 +70,44 @@
             // label_DramaTotalProgress
             // 
             this.label_DramaTotalProgress.AutoSize = true;
-            this.label_DramaTotalProgress.Location = new System.Drawing.Point(96, 166);
+            this.label_DramaTotalProgress.Font = new System.Drawing.Font("华文仿宋", 12F, System.Drawing.FontStyle.Bold);
+            this.label_DramaTotalProgress.Location = new System.Drawing.Point(33, 100);
             this.label_DramaTotalProgress.Name = "label_DramaTotalProgress";
-            this.label_DramaTotalProgress.Size = new System.Drawing.Size(65, 12);
+            this.label_DramaTotalProgress.Size = new System.Drawing.Size(93, 18);
             this.label_DramaTotalProgress.TabIndex = 0;
             this.label_DramaTotalProgress.Text = "番剧总进度";
             // 
             // textBox_DramaTotalProgress
             // 
-            this.textBox_DramaTotalProgress.Location = new System.Drawing.Point(186, 163);
+            this.textBox_DramaTotalProgress.Font = new System.Drawing.Font("宋体", 12F);
+            this.textBox_DramaTotalProgress.Location = new System.Drawing.Point(132, 97);
             this.textBox_DramaTotalProgress.Name = "textBox_DramaTotalProgress";
-            this.textBox_DramaTotalProgress.Size = new System.Drawing.Size(60, 21);
+            this.textBox_DramaTotalProgress.Size = new System.Drawing.Size(55, 26);
             this.textBox_DramaTotalProgress.TabIndex = 1;
             // 
             // label_DramaLocalProgress
             // 
             this.label_DramaLocalProgress.AutoSize = true;
-            this.label_DramaLocalProgress.Location = new System.Drawing.Point(84, 230);
+            this.label_DramaLocalProgress.Font = new System.Drawing.Font("华文仿宋", 12F, System.Drawing.FontStyle.Bold);
+            this.label_DramaLocalProgress.Location = new System.Drawing.Point(33, 266);
             this.label_DramaLocalProgress.Name = "label_DramaLocalProgress";
-            this.label_DramaLocalProgress.Size = new System.Drawing.Size(77, 12);
+            this.label_DramaLocalProgress.Size = new System.Drawing.Size(110, 18);
             this.label_DramaLocalProgress.TabIndex = 0;
             this.label_DramaLocalProgress.Text = "番剧当前进度";
             // 
             // textBox_DramaLocalProgress
             // 
-            this.textBox_DramaLocalProgress.Location = new System.Drawing.Point(186, 227);
+            this.textBox_DramaLocalProgress.Font = new System.Drawing.Font("宋体", 12F);
+            this.textBox_DramaLocalProgress.Location = new System.Drawing.Point(149, 263);
             this.textBox_DramaLocalProgress.Name = "textBox_DramaLocalProgress";
-            this.textBox_DramaLocalProgress.Size = new System.Drawing.Size(60, 21);
-            this.textBox_DramaLocalProgress.TabIndex = 1;
+            this.textBox_DramaLocalProgress.Size = new System.Drawing.Size(60, 26);
+            this.textBox_DramaLocalProgress.TabIndex = 2;
             // 
             // progressBar_Drama
             // 
             this.progressBar_Drama.Location = new System.Drawing.Point(34, 292);
             this.progressBar_Drama.Name = "progressBar_Drama";
-            this.progressBar_Drama.Size = new System.Drawing.Size(371, 23);
+            this.progressBar_Drama.Size = new System.Drawing.Size(371, 19);
             this.progressBar_Drama.TabIndex = 3;
             // 
             // singleDramaInfoShow

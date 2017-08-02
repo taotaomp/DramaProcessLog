@@ -34,8 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "labelWithSaveMessage";
-            this.Size = new System.Drawing.Size(150, 12);
+            this.Size = new System.Drawing.Size(150, 29);
             this.ResumeLayout(false);
 
         }

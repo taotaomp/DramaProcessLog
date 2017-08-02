@@ -35,6 +35,7 @@ namespace DPL
             dramaManager.Width = this.Width;
             dramaManager.Height = this.Height;
             dramaManager.Location = new Point(0, 0);
+            dramaManager.BackgroundImage = Image.FromFile(@".\image\bg01.jpg");
             this.Controls.Add(dramaManager);
             dramaManagerConfigure();    //番剧大页面容器配置
         }
@@ -61,8 +62,20 @@ namespace DPL
 
         private void Main_Load(object sender, EventArgs e)
         {
-            frmConfigure();             //加载窗体配置方法
             multiDramaInfoListLoad();   //从本地文件中加载信息
+            frmConfigure();             //加载窗体配置方法
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            using (StreamWriter SW = new StreamWriter("dramaInfo",false,Encoding.UTF8))
+            {
+                for (int i = 0; i < multiDramaInfoList.Count; i++)
+                {
+                    SW.WriteLine(multiDramaInfoList[i]);
+                }
+                SW.Close();
+            }
         }
     }
 }
