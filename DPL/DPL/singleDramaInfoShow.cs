@@ -53,6 +53,7 @@ namespace DPL
         Button countDownForTotal;
         Button countUpForLocal;
         Button countDownForLocal;
+        Button EnterUrl;
 
         private void withMessageControlsAdd()   //用于有消息传入时的控件添加
         {
@@ -106,6 +107,16 @@ namespace DPL
             countDownForLocal.BackColor = Color.FromArgb(120, 253, 179, 235);
             countDownForLocal.Click += new EventHandler(count_Click);
             this.Controls.Add(countDownForLocal);
+
+            EnterUrl = new Button();
+            EnterUrl.Location = new Point(34, 163);
+            EnterUrl.Text = "开始追番喵！";
+            EnterUrl.Width = 255;
+            EnterUrl.Height = 24;
+            EnterUrl.FlatStyle = FlatStyle.Popup;
+            EnterUrl.BackColor = Color.FromArgb(120, 253, 179, 235);
+            EnterUrl.Click += new EventHandler(EnterUrl_Click);
+            this.Controls.Add(EnterUrl);
         }
 
         private void count_Click(object sender, EventArgs e)
@@ -170,6 +181,19 @@ namespace DPL
             Main.dramaManager.Controls.Remove(this);
         }
 
+        private void EnterUrl_Click(object sender,EventArgs e)
+        {
+            string[] temp = originDramaInfo.Split('#');
+            if (temp[4].Equals(String.Empty))
+            {
+                MessageBox.Show("这个番剧还没有设定地址哦~");
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(temp[4]);
+            }  
+        }
+
         /// <summary>
         /// 构造方法 用于无数据输入的控件构造
         /// </summary>
@@ -194,12 +218,29 @@ namespace DPL
             set { dramaManager = value; }
         }
 
+        TextBox textbox_Url;
+
         private void noMessageControlsAdd()     //用于无消息传入时的控件添加
         {
             this.Controls.Remove(progressBar_Drama);
 
             pictureBox_DramaPic.Cursor = Cursors.Hand;
             pictureBox_DramaPic.Click += new System.EventHandler(pictureBox_DramaPic_Click);    //为图片控件绑定点击事件
+
+            Label labelUrl = new Label();
+            labelUrl.AutoSize = true;
+            labelUrl.Text = "番剧网页地址";
+            labelUrl.Font = new Font("华文仿宋", 12, FontStyle.Bold);
+            labelUrl.Location = new Point(34, 170);
+            labelUrl.BackColor = Color.FromArgb(0, 240, 240, 240);
+            this.Controls.Add(labelUrl);
+
+            textbox_Url = new TextBox();
+            textbox_Url.Font = new Font("宋体", 9);
+            textbox_Url.Location = new Point(170, 170);
+            textbox_Url.Width = 200;
+            textbox_Url.BackColor = Color.FromArgb(254, 214, 244);
+            this.Controls.Add(textbox_Url);
 
             Button confirm = new Button();
             confirm.Text = "确定";
@@ -223,7 +264,8 @@ namespace DPL
             string newDramaInfo = textBox_DramaName.Text + "#"+     //字符串合成
             textBox_DramaTotalProgress.Text +"#"+
             textBox_DramaLocalProgress.Text +"#"+
-            pictureBox_DramaPic.ImageLocation;
+            pictureBox_DramaPic.ImageLocation+"#"+
+            textbox_Url.Text;
 
             Main.multiDramaInfoList.Add(newDramaInfo);
             Main.multiDramaContainerEnbody.loadMulitDrama();    //重新装载所有数据
