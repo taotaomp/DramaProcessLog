@@ -17,6 +17,7 @@ namespace DPL
         {
             InitializeComponent();
             flowLayoutContainer = flowLayoutPanel_mulitDramaContainer;
+            flowLayoutPanel_mulitDramaContainer.AutoScroll = true;
             loadMulitDrama();
             flowLayoutPanel_mulitDramaContainer.BackgroundImage = Image.FromFile(@".\image\bg10.jpg");
         }
