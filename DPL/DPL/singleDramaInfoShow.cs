@@ -44,6 +44,7 @@ namespace DPL
             pictureBox_DramaPic.ImageLocation = temp[3];
             progressBar_Drama.Maximum = Convert.ToInt32(temp[1]);
             progressBar_Drama.Value = Convert.ToInt32(temp[2]);
+            UrlContent = temp[4];
             textBox_DramaLocalProgress.ReadOnly = true;
             textBox_DramaName.ReadOnly = true;
             textBox_DramaTotalProgress.ReadOnly = true;
@@ -54,6 +55,7 @@ namespace DPL
         Button countUpForLocal;
         Button countDownForLocal;
         Button EnterUrl;
+        string UrlContent;      //网页地址内容
 
         private void withMessageControlsAdd()   //用于有消息传入时的控件添加
         {
@@ -163,7 +165,8 @@ namespace DPL
                 string newDramaInfo = textBox_DramaName.Text + "#" +     //字符串合成
                 textBox_DramaTotalProgress.Text + "#" +
                 textBox_DramaLocalProgress.Text + "#" +
-                pictureBox_DramaPic.ImageLocation;
+                pictureBox_DramaPic.ImageLocation+"#"+
+                UrlContent;
 
                 Main.multiDramaInfoList.Remove(originDramaInfo);
                 Main.multiDramaInfoList.Add(newDramaInfo);
@@ -175,7 +178,7 @@ namespace DPL
 
         private void delete_Click(object sender,EventArgs e)
         {
-            Main.multiDramaInfoList.Remove(textBox_DramaName.Text + "#" + textBox_DramaTotalProgress.Text + "#" + textBox_DramaLocalProgress.Text + "#" + pictureBox_DramaPic.ImageLocation);
+            Main.multiDramaInfoList.Remove(textBox_DramaName.Text + "#" + textBox_DramaTotalProgress.Text + "#" + textBox_DramaLocalProgress.Text + "#" + pictureBox_DramaPic.ImageLocation + "#" + UrlContent);
             Main.multiDramaContainerEnbody.flowLayoutContainer.Controls.Clear();
             Main.multiDramaContainerEnbody.loadMulitDrama();
             Main.dramaManager.Controls.Remove(this);
