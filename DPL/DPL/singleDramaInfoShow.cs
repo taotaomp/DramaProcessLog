@@ -193,7 +193,14 @@ namespace DPL
             }
             else
             {
-                System.Diagnostics.Process.Start(temp[4]);
+                if(temp[4].Contains("http"))
+                {
+                    System.Diagnostics.Process.Start(temp[4]);
+                }
+                else
+                {
+                    System.Diagnostics.Process.Start("explorer.exe", temp[4]);
+                }
             }  
         }
 
